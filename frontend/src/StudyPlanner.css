@@ -1,0 +1,18 @@
+
+.study-planner .week-strip{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin:24px 0}
+.week-strip button{display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 6px;border:1px solid #dce6e0;border-radius:12px;background:transparent;color:inherit;cursor:pointer}
+.week-strip button>span{font-size:13px}.week-strip button>strong{font-size:24px;font-weight:600}.week-strip button>small{font-size:11px}
+.week-strip button[aria-pressed="true"]{background:#173e47;color:#fff;border-color:#173e47}
+.week-strip button:focus-visible,.choice-row label:has(input:focus-visible),.focus-choices label:has(input:focus-visible){outline:3px solid #56a892;outline-offset:3px}
+.agenda-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:26px 0 16px}
+.agenda-heading h3{margin:0;font-size:21px}.agenda-heading p,.agenda-heading>span{font-size:13px}
+.study-planner .schedule-board{display:block}.study-planner .schedule-day{display:none;border-radius:12px}.study-planner .schedule-day.selected-day{display:block}
+.study-planner .schedule-day>header{display:none}.study-planner .schedule-session{grid-template-columns:95px 2px minmax(0,1fr);padding:24px;gap:22px}
+.study-planner .schedule-session time{font-size:14px}.study-planner .schedule-session h3{font-size:22px;margin:6px 0 10px}.study-planner .schedule-session>div>span{font-size:12px;letter-spacing:0;text-transform:none}
+.session-instructions{font-size:14px}.session-instructions summary{cursor:pointer}.study-planner .session-instructions p{font-size:14px;max-width:65ch;margin:12px 0}.session-instructions a{font-size:13px}
+.study-planner .session-log{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:18px}.study-planner .session-log strong{font-size:13px}
+.agenda-rest{padding:32px;border:1px dashed #b8c9c4;border-radius:12px}.agenda-rest h3{margin-top:0}.agenda-rest p{margin-bottom:0;font-size:14px}
+.study-planner .planner-settings small{font-size:12px}.study-planner .planner-settings legend{font-size:14px}.study-planner .choice-row label,.study-planner .focus-choices label{font-size:13px}
+html[data-theme="dark"] .week-strip button[aria-pressed="true"]{background:#285c62}
+@media(max-width:620px){.study-planner .week-strip{gap:4px}.week-strip button{padding:12px 2px;gap:6px;border-radius:8px}.week-strip button>span{font-size:11px}.week-strip button>strong{font-size:20px}.week-strip button>small{font-size:9px}.agenda-heading{align-items:flex-start;flex-direction:column;gap:0}.study-planner .schedule-session{padding:18px 12px;grid-template-columns:70px 2px minmax(0,1fr);gap:12px}.study-planner .schedule-session h3{font-size:19px}.study-planner .schedule-session time{font-size:12px}}
+@media print{.week-strip,.agenda-heading,.agenda-rest{display:none!important}.study-planner .schedule-day{display:block!important}.study-planner .schedule-day>header{display:flex!important}.session-instructions{content-visibility:visible}.session-instructions::details-content{display:block!important;content-visibility:visible!important;height:auto!important}.session-instructions summary{display:none}.study-planner .schedule-session{padding:12px;break-inside:avoid}.study-planner .schedule-session h3{font-size:14pt}.study-planner .schedule-session p{font-size:10pt}}

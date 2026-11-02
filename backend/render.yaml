@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: careerforge-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: DATABASE_USERNAME
+        sync: false
+      - key: DATABASE_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_ORIGIN
+        value: https://careerforge-frontend-beta.vercel.app
+      - key: PASSWORD_RESET_ENABLED
+        value: "false"
+      - key: JAVA_TOOL_OPTIONS
+        value: "-Xmx256m -XX:MaxMetaspaceSize=160m"

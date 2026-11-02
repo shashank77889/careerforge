@@ -1,0 +1,77 @@
+.workspace-tabs { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:0 0 28px; padding:8px; border:1px solid #dce5e3; border-radius:12px; background:#f3f7f6; }
+.workspace-tabs button { padding:11px 16px; border:0; border-radius:8px; color:#425c60; background:transparent; font:inherit; cursor:pointer; }
+.workspace-tabs button[aria-pressed="true"] { background:#fff; color:#164a46; box-shadow:0 1px 5px #163b3b16; font-weight:600; }
+.workspace-tabs a { margin-left:auto; padding:10px; font-size:14px; color:#176d63; }
+.secondary-navigation { margin-top:20px; padding:12px 8px; border-top:1px solid #ffffff25; color:#c2d3d5; }
+.secondary-navigation summary { cursor:pointer; font-size:14px; padding:8px; }
+.secondary-navigation a { display:flex; gap:12px; align-items:center; padding:12px 8px; color:inherit; text-decoration:none; border-radius:8px; }
+.secondary-navigation a.active { background:#ffffff18; color:white; }
+.plan-goals .page-heading h1 { font-size:24px; }
+.plan-goals .page-heading .eyebrow, .plan-goals .page-heading p { display:none; }
+.gap-resource { margin-top:10px; font-size:14px; }
+.coach-launcher { position:fixed; bottom:max(22px,env(safe-area-inset-bottom)); right:24px; z-index:80; display:flex; align-items:center; gap:9px; min-height:52px; padding:12px 17px; border:1px solid #ffffff55; border-radius:28px; background:#176e65; color:white; box-shadow:0 6px 24px #143b3b30; cursor:pointer; font:inherit; font-weight:600; }
+.floating-coach { position:fixed; inset:auto 24px 86px auto; width:min(460px,calc(100vw - 32px)); max-height:calc(100dvh - 120px); padding:0; border:1px solid #dce5e3; border-radius:18px; background:#fff; color:#1b393d; box-shadow:0 18px 70px #0d323340; }
+.floating-coach::backdrop { background:#15383c30; }
+.floating-coach > header { display:flex; align-items:center; justify-content:space-between; padding:18px 22px; border-bottom:1px solid #e3eae8; }
+.floating-coach h2 { margin:0; font-size:20px; }
+.floating-coach small { color:#607779; }
+.floating-coach-content { padding:20px; overflow:auto; }
+.floating-coach .coach-panel { padding:0; margin:0; border:0; background:none; box-shadow:none; }
+.floating-coach .coach-panel .section-title { display:none; }
+.floating-coach .coach-prompts { display:flex; flex-wrap:wrap; gap:6px; }
+.floating-coach .coach-prompts button { padding:8px 10px; font-size:13px; }
+.floating-coach textarea { width:100%; min-height:105px; box-sizing:border-box; }
+.floating-coach .coach-form-footer { display:flex; flex-wrap:wrap; gap:12px; }
+.floating-coach .coach-answer { white-space:pre-wrap; overflow-wrap:anywhere; }
+.coach-unavailable a { display:block; margin:16px 0; color:#176e65; }
+.workspace main { padding-bottom:95px; }
+.dashboard-tools.focused-tools { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media(max-width:640px) { .coach-launcher { right:16px; padding:13px; } .coach-launcher span { display:none; } .floating-coach { right:16px; bottom:80px; max-height:calc(100dvh - 100px); } .workspace-tabs a { margin-left:0; width:100%; } .dashboard-tools.focused-tools { grid-template-columns:1fr; } }
+@media print { .coach-launcher, .floating-coach { display:none!important; } }
+
+.calendar-options {padding:20px;margin:18px 0;background:#f3f8f6;border:1px solid #d6e5df;border-radius:12px}
+.calendar-options small{display:block;margin-top:12px}
+.calendar-session-list {max-height:320px;overflow:auto;margin:14px 0}
+.calendar-session-list>div{display:flex;flex-wrap:wrap;gap:12px;padding:12px 0;border-bottom:1px solid #d6e5df}
+.calendar-session-list strong{width:100%}
+.calendar-session-list a,.video-resources a{color:#176e65}
+.mcq-options{display:grid;gap:12px;border:0;padding:0;margin:20px 0}
+.mcq-options label{display:flex;align-items:flex-start;gap:12px;padding:16px;border:1px solid #d6e5df;border-radius:10px;cursor:pointer}
+.mcq-options input{width:18px;min-width:18px;height:18px;margin:3px 0}
+.mcq-options label:has(input:checked){background:#e4f3ee;border-color:#176e65}
+.video-resources{margin:18px 0;border-top:1px solid #d6e5df;padding-top:14px}
+.video-resources summary{cursor:pointer;font-weight:600}
+.video-resources article{padding:12px 0}
+.schedule-session{grid-template-columns:90px 1px minmax(0,1fr)}
+@media print{.calendar-options{display:none!important}}
+
+/* Quiet surfaces and consistent interaction states across the workspace. */
+.workspace { background:#f5f7f8; }
+.workspace .page-heading h1 { letter-spacing:-.035em; font-weight:650; }
+.workspace .page-heading .eyebrow { letter-spacing:.08em; color:#637780; }
+.workspace .panel, .workspace .journey-settings { box-shadow:none; border-color:#dce4e8; }
+.workspace .journey-settings summary { padding:18px 22px; }
+.dashboard-launchpad { gap:22px; }
+.dashboard-launchpad .career-hero { background:#163746; border-radius:16px; box-shadow:none; padding:32px; }
+.dashboard-launchpad .career-hero h2 { font-size:clamp(27px,2.8vw,38px); line-height:1.15; margin:18px 0; letter-spacing:-.035em; }
+.dashboard-launchpad .hero-kicker { color:#b8d5db; letter-spacing:.1em; }
+.dashboard-launchpad .hero-kicker>span { display:none; }
+.dashboard-launchpad .hero-footnote { color:#bed0d7; }
+.dashboard-launchpad .next-focus { background:#fff; border:1px solid #dce4e8; border-top:3px solid #287e72; border-radius:16px; padding:28px; }
+.dashboard-launchpad .next-focus h2 { color:#193c48; }
+.dashboard-launchpad .next-focus p { color:#526a74; }
+.dashboard-launchpad .next-focus .focus-icon { display:none; }
+.dashboard-launchpad .next-focus .eyebrow { color:#276e64; letter-spacing:.09em; }
+.dashboard-tools.focused-tools { gap:18px; }
+.focused-tools .dashboard-tool { border-radius:12px; padding:24px; box-shadow:none; }
+.focused-tools .dashboard-tool:hover { transform:none; background:#fafdfe; border-color:#81a9a4; box-shadow:0 3px 12px #16374608; }
+.focused-tools .tool-label { font-size:13px; }
+.dashboard-secondary { border-radius:12px; box-shadow:none; }
+.workspace :is(a,button,input,select,textarea,summary):focus-visible { outline:3px solid #287e72; outline-offset:4px; }
+.workspace .primary { border-radius:9px; box-shadow:none; }
+.workspace .secondary { border-radius:9px; }
+@media(max-width:620px) {
+  .dashboard-launchpad .career-hero, .dashboard-launchpad .next-focus { padding:24px; }
+  .workspace .page-heading h1 { font-size:28px; }
+  .focused-tools .dashboard-tool { padding:20px; }
+}

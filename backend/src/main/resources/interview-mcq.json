@@ -1,0 +1,912 @@
+[
+  {
+    "group": "common",
+    "topic": "SQL",
+    "prompt": "Which SQL clause filters rows before grouping?",
+    "options": [
+      "WHERE",
+      "HAVING",
+      "ORDER BY",
+      "LIMIT"
+    ],
+    "correctIndex": 0,
+    "explanation": "Apply WHERE before GROUP BY; HAVING filters aggregated groups."
+  },
+  {
+    "group": "common",
+    "topic": "SQL",
+    "prompt": "Which join keeps every row from the left table?",
+    "options": [
+      "LEFT JOIN",
+      "INNER JOIN",
+      "CROSS JOIN only",
+      "RIGHT JOIN only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Start with the left table; unmatched right-side columns are NULL in a left join."
+  },
+  {
+    "group": "common",
+    "topic": "Git",
+    "prompt": "Which command records staged changes locally?",
+    "options": [
+      "git commit",
+      "git fetch",
+      "git push",
+      "git clone"
+    ],
+    "correctIndex": 0,
+    "explanation": "Stage with git add, then commit a local snapshot. Push shares commits with a remote."
+  },
+  {
+    "group": "common",
+    "topic": "Git",
+    "prompt": "What is a merge conflict?",
+    "options": [
+      "Git cannot automatically combine overlapping changes",
+      "The repository is deleted",
+      "Every branch has the same name",
+      "The network is disconnected"
+    ],
+    "correctIndex": 0,
+    "explanation": "Inspect both changes, resolve their intent, then stage and commit the resolution."
+  },
+  {
+    "group": "common",
+    "topic": "HTTP",
+    "prompt": "Which status normally means authentication is required?",
+    "options": [
+      "401",
+      "200",
+      "404",
+      "500"
+    ],
+    "correctIndex": 0,
+    "explanation": "Distinguish missing/invalid authentication (401) from denied permission (403)."
+  },
+  {
+    "group": "common",
+    "topic": "Testing",
+    "prompt": "What makes a useful regression test?",
+    "options": [
+      "It fails if previously fixed behavior breaks again",
+      "It always passes",
+      "It checks only comments",
+      "It avoids asserting behavior"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reproduce the bug, assert the expected behavior, and verify the test detects the original failure."
+  },
+  {
+    "group": "common",
+    "topic": "Problem solving",
+    "prompt": "What should you do first when debugging a reproducible failure?",
+    "options": [
+      "Create a minimal reproduction and inspect evidence",
+      "Rewrite every component",
+      "Ignore logs",
+      "Change unrelated settings"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reduce the problem and test one hypothesis at a time."
+  },
+  {
+    "group": "common",
+    "topic": "Data integrity",
+    "prompt": "What is the purpose of a database transaction?",
+    "options": [
+      "Group related operations into a consistent unit of work",
+      "Make all queries public",
+      "Remove validation",
+      "Guarantee every query is fast"
+    ],
+    "correctIndex": 0,
+    "explanation": "Identify operations that must succeed or roll back together; transactions preserve consistency."
+  },
+  {
+    "group": "common",
+    "topic": "Security",
+    "prompt": "How should application passwords be stored?",
+    "options": [
+      "With a salted password hashing algorithm",
+      "As plain text",
+      "With reversible Base64 encoding",
+      "In frontend source code"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use a password-specific hash such as BCrypt; encoding is not protection."
+  },
+  {
+    "group": "common",
+    "topic": "Algorithms",
+    "prompt": "Binary search on a sorted array has which worst-case search complexity?",
+    "options": [
+      "O(log n)",
+      "O(n squared)",
+      "O(n factorial)",
+      "O(n cubed)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Each comparison halves the remaining interval, so the number of steps grows logarithmically."
+  },
+  {
+    "group": "data",
+    "topic": "Statistics",
+    "prompt": "Which summary is usually less affected by an extreme outlier?",
+    "options": [
+      "Median",
+      "Mean",
+      "Maximum",
+      "Sum"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sort values and identify the middle; an extreme tail value changes the mean more than the median."
+  },
+  {
+    "group": "data",
+    "topic": "Machine Learning",
+    "prompt": "Why keep a test dataset separate?",
+    "options": [
+      "Estimate performance on unseen data",
+      "Train on every answer",
+      "Guarantee perfect accuracy",
+      "Choose features using test labels"
+    ],
+    "correctIndex": 0,
+    "explanation": "Fit and tune on training/validation data; reserve the test set for final evaluation."
+  },
+  {
+    "group": "data",
+    "topic": "Machine Learning",
+    "prompt": "High training accuracy and poor validation accuracy usually suggest what?",
+    "options": [
+      "Overfitting",
+      "Guaranteed generalization",
+      "No variance",
+      "Perfect data quality"
+    ],
+    "correctIndex": 0,
+    "explanation": "Compare train and validation errors; regularization or simpler models can reduce overfitting."
+  },
+  {
+    "group": "data",
+    "topic": "Pandas",
+    "prompt": "Which operation combines tables using a shared key?",
+    "options": [
+      "merge",
+      "head",
+      "describe",
+      "plot"
+    ],
+    "correctIndex": 0,
+    "explanation": "Identify join keys and expected cardinality before merging; inspect duplicate keys."
+  },
+  {
+    "group": "data",
+    "topic": "NumPy",
+    "prompt": "What is broadcasting?",
+    "options": [
+      "Applying compatible operations across different array shapes",
+      "Sending an array over radio",
+      "Always copying every element",
+      "Removing all dimensions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Compare shapes from the trailing dimensions; dimensions must match or one must be 1."
+  },
+  {
+    "group": "data",
+    "topic": "Statistics",
+    "prompt": "Does correlation alone establish causation?",
+    "options": [
+      "No; confounding or reverse causality may explain it",
+      "Yes, always",
+      "Only when positive",
+      "Only for large datasets"
+    ],
+    "correctIndex": 0,
+    "explanation": "Look for a causal design and alternate explanations before making causal claims."
+  },
+  {
+    "group": "data",
+    "topic": "Classification",
+    "prompt": "What does precision measure?",
+    "options": [
+      "True positives divided by predicted positives",
+      "True positives divided by actual positives",
+      "All predictions divided by errors",
+      "True negatives divided by actual positives"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ask: of the positive predictions, how many were correct? This differs from recall."
+  },
+  {
+    "group": "data",
+    "topic": "Data cleaning",
+    "prompt": "What should guide missing-value handling?",
+    "options": [
+      "The meaning and pattern of missingness",
+      "Always replace with zero",
+      "Always delete all rows",
+      "Always replace with the largest value"
+    ],
+    "correctIndex": 0,
+    "explanation": "Explore why data is missing and assess bias before selecting imputation or deletion."
+  },
+  {
+    "group": "data",
+    "topic": "Neural networks",
+    "prompt": "What does backpropagation compute?",
+    "options": [
+      "Gradients of loss with respect to parameters",
+      "The final deployment URL",
+      "A guarantee of optimal parameters",
+      "The train/test split"
+    ],
+    "correctIndex": 0,
+    "explanation": "Apply the chain rule through the network; an optimizer uses those gradients to update weights."
+  },
+  {
+    "group": "data",
+    "topic": "Scikit-learn",
+    "prompt": "Why fit preprocessing inside each cross-validation training fold?",
+    "options": [
+      "To avoid leaking validation information",
+      "To remove the need for labels",
+      "To force accuracy to 100%",
+      "To train on the validation fold"
+    ],
+    "correctIndex": 0,
+    "explanation": "Statistics such as scaling means must be learned only from the training fold."
+  },
+  {
+    "group": "java",
+    "topic": "Java",
+    "prompt": "Which Java comparison normally checks String content?",
+    "options": [
+      "equals",
+      "== in every case",
+      "instanceof String only",
+      "hashCode equality alone"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use equals for content; == compares object references."
+  },
+  {
+    "group": "java",
+    "topic": "Java",
+    "prompt": "What does an interface primarily define?",
+    "options": [
+      "A contract that classes can implement",
+      "A database password",
+      "A memory address",
+      "An application installer"
+    ],
+    "correctIndex": 0,
+    "explanation": "Specify behavior through the interface, then provide implementations."
+  },
+  {
+    "group": "java",
+    "topic": "Java",
+    "prompt": "Which collection disallows duplicate elements?",
+    "options": [
+      "Set",
+      "List",
+      "ArrayList",
+      "LinkedList"
+    ],
+    "correctIndex": 0,
+    "explanation": "Choose a Set when membership uniqueness is required; ordering depends on the implementation."
+  },
+  {
+    "group": "java",
+    "topic": "Java",
+    "prompt": "What does try-with-resources help ensure?",
+    "options": [
+      "AutoCloseable resources are closed",
+      "All exceptions disappear",
+      "Every thread is stopped",
+      "The program never fails"
+    ],
+    "correctIndex": 0,
+    "explanation": "Declare resources in the try header so they are closed even when an exception occurs."
+  },
+  {
+    "group": "java",
+    "topic": "Spring Boot",
+    "prompt": "What is dependency injection?",
+    "options": [
+      "Providing collaborators to an object externally",
+      "Copying every dependency into each method",
+      "Using only static methods",
+      "Hardcoding credentials"
+    ],
+    "correctIndex": 0,
+    "explanation": "Inject abstractions through constructors to clarify dependencies and improve testing."
+  },
+  {
+    "group": "java",
+    "topic": "REST API",
+    "prompt": "Which HTTP method is normally used for a partial resource update?",
+    "options": [
+      "PATCH",
+      "GET",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use PATCH for partial changes; GET reads and PUT typically replaces a representation."
+  },
+  {
+    "group": "java",
+    "topic": "Java",
+    "prompt": "Why must equals and hashCode be consistent?",
+    "options": [
+      "Hash-based collections rely on equal objects having equal hashes",
+      "All objects must have the same hash",
+      "It makes strings mutable",
+      "It eliminates collisions"
+    ],
+    "correctIndex": 0,
+    "explanation": "If two objects are equal, their hash codes must match; unequal objects may still collide."
+  },
+  {
+    "group": "java",
+    "topic": "Java",
+    "prompt": "What does immutability mean?",
+    "options": [
+      "An object's state cannot change after construction",
+      "An object has no methods",
+      "An object can never be referenced",
+      "An object must be global"
+    ],
+    "correctIndex": 0,
+    "explanation": "Control construction and mutation; immutable state is easier to share safely."
+  },
+  {
+    "group": "java",
+    "topic": "Concurrency",
+    "prompt": "What is a race condition?",
+    "options": [
+      "The result depends on uncontrolled interleaving of operations",
+      "An algorithm always runs quickly",
+      "Threads execute alphabetically",
+      "A program has only one thread"
+    ],
+    "correctIndex": 0,
+    "explanation": "Identify shared mutable state and protect compound operations with appropriate synchronization."
+  },
+  {
+    "group": "java",
+    "topic": "Databases",
+    "prompt": "Why use parameterized SQL queries?",
+    "options": [
+      "Separate SQL structure from untrusted values",
+      "Make passwords public",
+      "Disable authorization",
+      "Guarantee zero query latency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bind values instead of concatenating user input into SQL text."
+  },
+  {
+    "group": "python",
+    "topic": "Python",
+    "prompt": "Which built-in collection stores unique elements?",
+    "options": [
+      "set",
+      "list",
+      "tuple",
+      "str"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use a set for uniqueness and membership; sets are not indexed sequences."
+  },
+  {
+    "group": "python",
+    "topic": "Python",
+    "prompt": "What does a generator yield?",
+    "options": [
+      "Values lazily as iteration proceeds",
+      "All results as a list automatically",
+      "Only strings",
+      "Only exceptions"
+    ],
+    "correctIndex": 0,
+    "explanation": "A generator resumes between yields and can avoid materializing all results."
+  },
+  {
+    "group": "python",
+    "topic": "Python",
+    "prompt": "Why is a mutable default argument risky?",
+    "options": [
+      "The same object can be reused across calls",
+      "Defaults are never evaluated",
+      "Lists cannot be arguments",
+      "Every call makes two copies"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use None as the default and construct a fresh object inside the function."
+  },
+  {
+    "group": "python",
+    "topic": "Python",
+    "prompt": "What does a context manager such as with open(...) do?",
+    "options": [
+      "Manage setup and cleanup of a resource",
+      "Remove file permissions",
+      "Encrypt every file",
+      "Prevent all I/O failures"
+    ],
+    "correctIndex": 0,
+    "explanation": "The with statement ensures cleanup via the context manager on normal exit or exceptions."
+  },
+  {
+    "group": "python",
+    "topic": "Python",
+    "prompt": "Which operator tests object identity?",
+    "options": [
+      "is",
+      "==",
+      "in",
+      "+"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use is for identity, such as checking None; use == for value equality."
+  },
+  {
+    "group": "python",
+    "topic": "Python",
+    "prompt": "Which exception is commonly raised for an absent dictionary key?",
+    "options": [
+      "KeyError",
+      "ZeroDivisionError",
+      "SyntaxError",
+      "IndentationError"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use get for optional keys or handle KeyError when absence is exceptional."
+  },
+  {
+    "group": "python",
+    "topic": "Python",
+    "prompt": "What does list comprehension usually create?",
+    "options": [
+      "A new list from iteration and optional filtering",
+      "A database table",
+      "A new process",
+      "An encrypted file"
+    ],
+    "correctIndex": 0,
+    "explanation": "Separate the expression from the iteration and condition to understand the resulting list."
+  },
+  {
+    "group": "python",
+    "topic": "Django",
+    "prompt": "What is an ORM used for?",
+    "options": [
+      "Mapping application objects to database operations",
+      "Rendering only CSS",
+      "Replacing authentication",
+      "Disabling transactions"
+    ],
+    "correctIndex": 0,
+    "explanation": "An ORM expresses database access with models; still inspect queries and avoid N+1 reads."
+  },
+  {
+    "group": "python",
+    "topic": "Flask",
+    "prompt": "Why validate request input on the server?",
+    "options": [
+      "Clients can bypass frontend validation",
+      "Browsers always validate securely",
+      "Validation replaces authorization",
+      "All JSON is trustworthy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Treat external input as untrusted and validate type, bounds, and business rules."
+  },
+  {
+    "group": "python",
+    "topic": "Python",
+    "prompt": "What is the usual effect of catching Exception and silently passing?",
+    "options": [
+      "It can hide failures and make diagnosis difficult",
+      "It fixes all errors",
+      "It guarantees successful writes",
+      "It retries automatically"
+    ],
+    "correctIndex": 0,
+    "explanation": "Catch expected exceptions narrowly and preserve useful error information without exposing secrets."
+  },
+  {
+    "group": "frontend",
+    "topic": "HTML",
+    "prompt": "Why associate a label with a form input?",
+    "options": [
+      "To give it an accessible name and usable click target",
+      "To make all data valid",
+      "To encrypt input",
+      "To submit automatically"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use a matching for/id or wrap the input in a label; placeholders do not replace labels."
+  },
+  {
+    "group": "frontend",
+    "topic": "CSS",
+    "prompt": "What does a media query support?",
+    "options": [
+      "Conditional styles for viewport or device features",
+      "Database queries",
+      "Password hashing",
+      "JavaScript imports"
+    ],
+    "correctIndex": 0,
+    "explanation": "Define layout behavior at useful breakpoints and test content at narrow widths."
+  },
+  {
+    "group": "frontend",
+    "topic": "JavaScript",
+    "prompt": "What does await do in an async function?",
+    "options": [
+      "Pauses that function until a promise settles",
+      "Blocks every browser tab",
+      "Converts all values to strings",
+      "Cancels the request automatically"
+    ],
+    "correctIndex": 0,
+    "explanation": "The async function yields control while waiting; handle rejection explicitly."
+  },
+  {
+    "group": "frontend",
+    "topic": "React",
+    "prompt": "Why use stable keys for rendered lists?",
+    "options": [
+      "To preserve item identity across updates",
+      "To encrypt components",
+      "To avoid all rerenders",
+      "To make every element global"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use a stable item ID; array positions can misidentify items after insertion or reordering."
+  },
+  {
+    "group": "frontend",
+    "topic": "React",
+    "prompt": "How should a state array usually be updated?",
+    "options": [
+      "Create a new array and pass it to the setter",
+      "Mutate it without notifying React",
+      "Edit the DOM directly",
+      "Assign to a global variable"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use immutable updates such as map/filter so React can observe the new state reference."
+  },
+  {
+    "group": "frontend",
+    "topic": "Accessibility",
+    "prompt": "Which interaction should a custom dialog support?",
+    "options": [
+      "Keyboard focus management and dismissal",
+      "Mouse use only",
+      "Hidden close controls",
+      "No accessible name"
+    ],
+    "correctIndex": 0,
+    "explanation": "Name the dialog, move focus inside, support Escape, and restore focus when it closes."
+  },
+  {
+    "group": "frontend",
+    "topic": "JavaScript",
+    "prompt": "What does event.preventDefault() prevent?",
+    "options": [
+      "The browser's default action for that event",
+      "All JavaScript execution",
+      "All event listeners",
+      "Network traffic everywhere"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use it when replacing actions such as a native form submission; it does not stop propagation."
+  },
+  {
+    "group": "frontend",
+    "topic": "CSS",
+    "prompt": "What does box-sizing: border-box include in a declared width?",
+    "options": [
+      "Content, padding, and border",
+      "Margins only",
+      "Only text",
+      "Only the border"
+    ],
+    "correctIndex": 0,
+    "explanation": "Border-box makes sizing more predictable because padding and borders fit within the width."
+  },
+  {
+    "group": "frontend",
+    "topic": "Web security",
+    "prompt": "How should untrusted text normally be rendered in React?",
+    "options": [
+      "As text rather than injected HTML",
+      "Using raw innerHTML without sanitization",
+      "As an executable script",
+      "Inside a style expression"
+    ],
+    "correctIndex": 0,
+    "explanation": "Keep text as text; avoid raw HTML injection or sanitize with an appropriate library when required."
+  },
+  {
+    "group": "frontend",
+    "topic": "Web performance",
+    "prompt": "Why lazy-load a large optional page?",
+    "options": [
+      "Reduce initial JavaScript downloaded and parsed",
+      "Remove authentication",
+      "Make all requests synchronous",
+      "Guarantee offline support"
+    ],
+    "correctIndex": 0,
+    "explanation": "Split optional code and provide a loading state; measure whether it improves initial performance."
+  },
+  {
+    "group": "testing",
+    "topic": "Selenium",
+    "prompt": "Why prefer an explicit wait over a fixed sleep?",
+    "options": [
+      "It waits for a relevant condition up to a timeout",
+      "It always waits longer",
+      "It ignores failures",
+      "It bypasses login"
+    ],
+    "correctIndex": 0,
+    "explanation": "Wait for the state needed for the next action to reduce timing-related flakiness."
+  },
+  {
+    "group": "testing",
+    "topic": "Testing",
+    "prompt": "What is a boundary-value test?",
+    "options": [
+      "Testing at and around valid limits",
+      "Testing only random text",
+      "Testing comments",
+      "Testing only happy paths"
+    ],
+    "correctIndex": 0,
+    "explanation": "For a range, test just below, at, and just above each boundary."
+  },
+  {
+    "group": "testing",
+    "topic": "API Testing",
+    "prompt": "Which check detects broken object-level authorization?",
+    "options": [
+      "One user attempts to access another user's resource",
+      "Only checking a 200 response",
+      "Only checking JSON formatting",
+      "Testing the homepage color"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use distinct test accounts and assert access is denied across ownership boundaries."
+  },
+  {
+    "group": "testing",
+    "topic": "Testing",
+    "prompt": "What is a flaky test?",
+    "options": [
+      "A test that passes and fails without relevant code changes",
+      "A test with assertions",
+      "A test that always detects a bug",
+      "A test written in Java"
+    ],
+    "correctIndex": 0,
+    "explanation": "Investigate timing, shared state, data dependence, and nondeterminism before trusting results."
+  },
+  {
+    "group": "testing",
+    "topic": "Testing",
+    "prompt": "What is a test double used for?",
+    "options": [
+      "Replacing a dependency during a test",
+      "Doubling production users",
+      "Running every test twice",
+      "Removing assertions"
+    ],
+    "correctIndex": 0,
+    "explanation": "Isolate a dependency and control its behavior; avoid mocking the behavior you intend to verify."
+  },
+  {
+    "group": "testing",
+    "topic": "API Testing",
+    "prompt": "Which case is important for a create endpoint?",
+    "options": [
+      "Invalid input must not leave a partial record",
+      "Only checking the button label",
+      "Only checking server uptime",
+      "Ignoring response status"
+    ],
+    "correctIndex": 0,
+    "explanation": "Validate both the response and persisted effects, including failure cases."
+  },
+  {
+    "group": "testing",
+    "topic": "Selenium",
+    "prompt": "Which locator is often more stable?",
+    "options": [
+      "A deliberate test ID or accessible role/name",
+      "A long absolute XPath based on layout",
+      "A random generated CSS class",
+      "An element's screen coordinates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Prefer selectors that express stable identity or user-visible meaning."
+  },
+  {
+    "group": "testing",
+    "topic": "Testing",
+    "prompt": "What is the goal of smoke testing?",
+    "options": [
+      "Check critical flows before deeper testing",
+      "Test every input exhaustively",
+      "Replace security testing",
+      "Prove no defects exist"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cover the essential paths quickly to establish whether a build is testable."
+  },
+  {
+    "group": "testing",
+    "topic": "Jest",
+    "prompt": "Why await an asynchronous assertion or return its promise?",
+    "options": [
+      "So the test runner waits for it",
+      "To remove the assertion",
+      "To hide rejection",
+      "To force a browser reload"
+    ],
+    "correctIndex": 0,
+    "explanation": "If a test exits before the assertion runs, it can pass without checking the behavior."
+  },
+  {
+    "group": "testing",
+    "topic": "Testing",
+    "prompt": "What is an equivalence partition?",
+    "options": [
+      "A group of inputs expected to behave similarly",
+      "A duplicate database",
+      "A set of screenshots",
+      "A collection of all defects"
+    ],
+    "correctIndex": 0,
+    "explanation": "Select representative inputs from each behavior class, then add boundary cases."
+  },
+  {
+    "group": "security",
+    "topic": "Networking",
+    "prompt": "What is DNS primarily used for?",
+    "options": [
+      "Resolving names to records such as IP addresses",
+      "Encrypting all network traffic",
+      "Storing passwords",
+      "Compiling code"
+    ],
+    "correctIndex": 0,
+    "explanation": "Separate name resolution from transport and TLS when diagnosing a connection."
+  },
+  {
+    "group": "security",
+    "topic": "Security",
+    "prompt": "What does least privilege mean?",
+    "options": [
+      "Grant only the access needed for a task",
+      "Grant administrator access to everyone",
+      "Never review permissions",
+      "Make all records public"
+    ],
+    "correctIndex": 0,
+    "explanation": "Start with minimal permissions and expand only for a justified need."
+  },
+  {
+    "group": "security",
+    "topic": "Security",
+    "prompt": "What is the distinction between authentication and authorization?",
+    "options": [
+      "Identity verification versus permission checking",
+      "They always mean the same thing",
+      "Encryption versus compression",
+      "Logging versus backup"
+    ],
+    "correctIndex": 0,
+    "explanation": "First establish who is acting, then check whether that actor may perform the operation."
+  },
+  {
+    "group": "security",
+    "topic": "Linux",
+    "prompt": "What does chmod control?",
+    "options": [
+      "File permission bits",
+      "DNS records",
+      "CPU frequency",
+      "Database schema"
+    ],
+    "correctIndex": 0,
+    "explanation": "Check read/write/execute permissions for owner, group, and others."
+  },
+  {
+    "group": "security",
+    "topic": "SIEM",
+    "prompt": "What is a false positive alert?",
+    "options": [
+      "Benign activity flagged as suspicious",
+      "Malicious activity missed",
+      "A guaranteed breach",
+      "An encrypted log"
+    ],
+    "correctIndex": 0,
+    "explanation": "Review context and tune detections without blindly disabling monitoring."
+  },
+  {
+    "group": "security",
+    "topic": "Security",
+    "prompt": "What does TLS primarily protect in transit?",
+    "options": [
+      "Confidentiality and integrity with authenticated endpoints when validated",
+      "Data after it reaches a compromised endpoint",
+      "Every application bug",
+      "All stored backups"
+    ],
+    "correctIndex": 0,
+    "explanation": "Validate certificates; TLS protects the connection, not all endpoint behavior."
+  },
+  {
+    "group": "security",
+    "topic": "Security",
+    "prompt": "What is a phishing attempt?",
+    "options": [
+      "Deceptive communication seeking actions or information",
+      "A routine database join",
+      "A password hash",
+      "A network cable fault"
+    ],
+    "correctIndex": 0,
+    "explanation": "Verify the sender and destination through a trusted channel before acting."
+  },
+  {
+    "group": "security",
+    "topic": "Security",
+    "prompt": "Where is it appropriate to practice exploitation?",
+    "options": [
+      "In authorized labs or explicitly permitted systems",
+      "On any public website",
+      "On friends' accounts without permission",
+      "On random company servers"
+    ],
+    "correctIndex": 0,
+    "explanation": "Confirm scope and authorization before testing; use intentionally vulnerable labs."
+  },
+  {
+    "group": "security",
+    "topic": "Cryptography",
+    "prompt": "What is a digital signature used to verify?",
+    "options": [
+      "Origin/authenticity and integrity with the appropriate public key",
+      "Confidentiality of every message",
+      "Compression efficiency",
+      "The sender's physical location"
+    ],
+    "correctIndex": 0,
+    "explanation": "Verify with the signer's public key; a signature alone does not encrypt content."
+  },
+  {
+    "group": "security",
+    "topic": "Security",
+    "prompt": "Why log security-relevant events without secrets?",
+    "options": [
+      "To support investigation without exposing credentials",
+      "To store passwords for convenience",
+      "To replace authorization",
+      "To publish private data"
+    ],
+    "correctIndex": 0,
+    "explanation": "Record actionable context and identifiers while excluding tokens, passwords, and unnecessary personal data."
+  }
+]

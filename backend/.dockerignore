@@ -1,0 +1,12 @@
+target
+.git
+.idea
+.vscode
+.local
+.env
+logs
+uploads
+*.log
+*-test.json
+jwt-*.json
+login-success.json

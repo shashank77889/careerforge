@@ -1,0 +1,22 @@
+name: CareerForge availability
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17,47 * * * *'
+permissions:
+  contents: read
+concurrency:
+  group: careerforge-availability
+  cancel-in-progress: false
+jobs:
+  availability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check frontend and database-backed API
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --retry 2 --retry-all-errors --connect-timeout 10 --max-time 20 https://careerforge-frontend-beta.vercel.app/ -o /tmp/frontend.html
+          curl --fail --silent --show-error --retry 2 --retry-all-errors --connect-timeout 10 --max-time 20 https://careerforge-frontend-beta.vercel.app/api/health -o /tmp/health.json
+          python3 -c 'import json; assert json.load(open("/tmp/health.json"))["status"] == "UP", "CareerForge API is unhealthy"'

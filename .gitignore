@@ -1,0 +1,17 @@
+**/node_modules/
+**/dist/
+**/target/
+**/.local/
+**/uploads/
+**/logs/
+**/data/
+**/.env
+**/.env.*
+!**/.env.example
+*.log
+*-test.json
+jwt-*.json
+login-success.json
+*.dump
+*.db
+*.mv.db

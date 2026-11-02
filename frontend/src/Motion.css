@@ -1,0 +1,35 @@
+
+/* Small, interruptible transitions. No animation changes application state. */
+@media screen and (prefers-reduced-motion: no-preference) {
+ .page-transition { animation: page-enter 220ms cubic-bezier(.2,.7,.3,1) both; }
+ .notice, .match-results, .coach-answer { animation: feedback-enter 180ms ease-out both; }
+ .primary, .secondary, .dashboard-tool, .sidebar nav a { transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease; }
+ .primary:active, .secondary:active { transform: scale(.98); }
+ .primary svg, .text-link svg { transition: transform 160ms ease; }
+ .daily-progress progress::-webkit-progress-value { transition: width 240ms ease; }
+ .daily-progress progress::-moz-progress-bar { transition: width 240ms ease; }
+ .comparison-track > span, .dial-value { transition: width 240ms ease, stroke-dasharray 240ms ease; }
+ details[open] > :not(summary) { animation: feedback-enter 180ms ease-out; }
+ .floating-coach[open] { animation: page-enter 200ms ease-out; }
+ @supports (interpolate-size: allow-keywords) and (transition-behavior: allow-discrete) {
+  .workspace details:not(.profile-menu)::details-content {
+   interpolate-size: allow-keywords;
+   content-visibility: hidden;
+   block-size: 0;
+   opacity: 0;
+   overflow: clip;
+   transition: block-size 200ms ease, opacity 160ms ease, content-visibility 200ms allow-discrete;
+  }
+  .workspace details:not(.profile-menu)[open]::details-content { content-visibility: visible; block-size: auto; opacity: 1; }
+ }
+ @media (hover: hover) and (pointer: fine) {
+  .dashboard-tool:hover { transform: translateY(-3px); }
+  .primary:hover, .secondary:hover { transform: translateY(-1px); }
+  .primary:hover svg, .text-link:hover svg { transform: translateX(3px); }
+ }
+}
+@keyframes page-enter { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes feedback-enter { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after, *::details-content { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

@@ -1,0 +1,36 @@
+/* Bundled typography for the application and printed timetable. */
+@import '@fontsource/source-sans-3/latin-400.css';
+@import '@fontsource/source-sans-3/latin-400-italic.css';
+@import '@fontsource/source-sans-3/latin-600.css';
+@import '@fontsource/source-sans-3/latin-700.css';
+
+:root { --font-ui: 'Source Sans 3', Arial, sans-serif; }
+body, button, input, select, textarea { font-family: var(--font-ui); }
+body { line-height: 1.65; }
+h1, h2, h3, h4,
+.page-heading h1, .career-hero h2, .roadmap-banner h2,
+.auth-form h2, .auth-pitch h1, .portfolio-title h2,
+.interview-intro h2, .interview-question, .planner-heading h2,
+.match-form-heading h2, .match-score-card h2, .match-learning>div:first-child h2 {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  letter-spacing: -.018em;
+}
+.page-heading h1, .auth-pitch h1 { line-height: 1.18; }
+.dashboard-launchpad .career-hero h2 { font-weight: 600; letter-spacing: -.018em; }
+.readiness-dial strong, .roadmap-progress strong, .journey-stats strong,
+.match-score strong, .study-progress strong, .rewrite-template, .rewrite-template small {
+  font-family: var(--font-ui);
+}
+.readiness-dial strong, .roadmap-progress strong, .journey-stats strong, .match-score strong {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  letter-spacing: -.025em;
+}
+.brand-lockup, .sidebar>.brand-lockup { font-weight: 700; letter-spacing: -.025em; }
+.primary, .secondary, .sidebar nav a.active { font-weight: 600; }
+.eyebrow, .page-heading .eyebrow { font-weight: 600; letter-spacing: .09em; }
+@media screen and (min-width: 621px) {
+  .sidebar nav a { font-size: 14px; }
+  .page-heading p { font-size: 15px; }
+}
