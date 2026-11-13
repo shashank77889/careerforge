@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://careerforge-backend-production-6f51.up.railway.app/api/:path*"
+      "destination": "https://careerforge-api-9i75.onrender.com/api/:path*"
     },
     {
       "source": "/(.*)",

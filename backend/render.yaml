@@ -14,7 +14,7 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: FRONTEND_ORIGIN
-        value: https://careerforge-frontend-beta.vercel.app
+        sync: false
       - key: PASSWORD_RESET_ENABLED
         value: "false"
       - key: JAVA_TOOL_OPTIONS
