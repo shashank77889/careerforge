@@ -24,6 +24,8 @@
     </properties>
 
     <dependencies><dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-mail</artifactId></dependency>
+        <!-- TiDB dialect: TiDB rejects MySQL 8 "FOR UPDATE OF alias" locks. Version comes from Spring Boot. -->
+        <dependency><groupId>org.hibernate.orm</groupId><artifactId>hibernate-community-dialects</artifactId></dependency>
 
         <!-- ================= WEB / REST API ================= -->
 
